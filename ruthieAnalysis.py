@@ -1,4 +1,4 @@
-class regulations:
+class analysisProj:
 
     def __init__(self, filename):
         self.fname = filename
