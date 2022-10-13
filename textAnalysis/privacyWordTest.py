@@ -1,15 +1,15 @@
 from ruthieAnalysis import *
 
-instaPrivacy = analysisProj("instaPrivacy.txt")
+privacyPolicy = analysisProj("facebookPolicy.txt")
 
-print("number of lines:", instaPrivacy.filelen())
+print("number of lines:", privacyPolicy.filelen())
 
-print("number of stanzas:", instaPrivacy.stanzact())
+print("number of stanzas:", privacyPolicy.stanzact())
 
-print("number of words per line", instaPrivacy.wordct())
+print("number of words per line", privacyPolicy.wordct())
 
-print("number of words", instaPrivacy.total())
+print("number of words", privacyPolicy.total())
 
-impWords = ["personal", "private", ]
+impWords = ["personal", "private", "privacy", "protection", "rights", "safe", "guard", "legal", "settings", " lock ", " locks ", "password", "username", "block"]
 for w in impWords:
-    print(f"number of {w} in insta:", instaPrivacy.privacyWords(w))
+    print(f'number of {w} in insta:', privacyPolicy.privacyWords(w))

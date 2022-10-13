@@ -7,6 +7,7 @@ class analysisProj:
         self.fname = filename
         with open(self.fname) as f:
             self.lines = f.readlines()
+        print(len(self.lines))
         
     def filelen(self):
         n = 0
@@ -46,12 +47,11 @@ class analysisProj:
             if word.lower() in s.lower():
                 n += 1
                 r.append(s)
-        return n, r
+        return n
     
     def getSentences (self):
-        with open (self.filename) as f:
+        with open (self.fname) as f:
             fullText = f.read()
-        fullText = f.read()
         self.sentences = fullText.split(".")
 
 
